@@ -20,10 +20,10 @@ void loop() {
 
 void manageHeatedBed() {
   if( (BED_HEAT_PIN > -1) && (BED_BUTTON_PIN > -1) ) {
-    if( digitalRead(BED_BUTTON_PIN) ) {
-      digitalWrite(BED_HEAT_PIN, HIGH);
+    if( digitalRead(BED_BUTTON_PIN) ) { //if true, button is off
+      digitalWrite(BED_HEAT_PIN, LOW);  // off
     } else {
-      digitalWrite(BED_HEAT_PIN, LOW);
+      digitalWrite(BED_HEAT_PIN, HIGH); // on
     }
   }
 }
